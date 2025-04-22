@@ -8,7 +8,7 @@ copy_wallpaper() {
     [[ -f "$1" ]] && cp "$1" "$CURRENT"
 }
 # Pick a random wallpaper
-RANDOM_FILE=$(find "$FOLDER" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" \) | shuf -n 1)
+RANDOM_FILE=$(find "$FOLDER" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" -o -iname "*.webp" \) | shuf -n 1)
 
 if [[ -f "$RANDOM_FILE" ]]; then
     # Apply wallpaper and pywal
